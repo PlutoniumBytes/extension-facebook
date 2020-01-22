@@ -58,7 +58,7 @@ class FacebookCFFI {
 	}
 
 	@CPP public static function init(onTokenChange : String->Void) {}
-	@CPP public static function logout();
+	@CPP public static function logout(){}
 	@CPP public static function logInWithPublishPermissions(permissions : Array<String> = null) {}
 	@CPP public static function logInWithReadPermissions(permissions : Array<String> = null) {}
 
@@ -69,7 +69,7 @@ class FacebookCFFI {
 		contentTitle : String,
 		imageURL : String,
 		contentDescription : String
-	) {};
+	) {}
 
 	@CPP public static function appRequest(
 		message : String,
@@ -78,17 +78,17 @@ class FacebookCFFI {
 		objectId : String = null,
 		actionType : Int = 0,
 		data : String = null
-	) {};
+	) {}
 
-	@CPP public static function setOnLoginSuccessCallback(f : Void->Void);
-	@CPP public static function setOnLoginCancelCallback(f : Void->Void);
-	@CPP public static function setOnLoginErrorCallback(f : String->Void);
+	@CPP public static function setOnLoginSuccessCallback(f : Void->Void){}
+	@CPP public static function setOnLoginCancelCallback(f : Void->Void){}
+	@CPP public static function setOnLoginErrorCallback(f : String->Void){}
 
-	@CPP public static function setOnAppInviteComplete(f : String->Void);	// passes a JSON object to f
-	@CPP public static function setOnAppInviteFail(f : String->Void);
+	@CPP public static function setOnAppInviteComplete(f : String->Void){}	// passes a JSON object to f
+	@CPP public static function setOnAppInviteFail(f : String->Void){}
 
 	@CPP("extension_facebook","setOnAppRequestComplete")
-	static function _setOnAppRequestComplete(f : String->Void);
+	static function _setOnAppRequestComplete(f : String->Void){}
 
 	public static function setOnAppRequestComplete(f : String->Void) {
 		_setOnAppRequestComplete(function(str) {
@@ -96,9 +96,9 @@ class FacebookCFFI {
 			f(str);
 		});
 	}
-	@CPP public static function setOnAppRequestFail(f : String->Void);
+	@CPP public static function setOnAppRequestFail(f : String->Void){}
 
-	@CPP public static function setOnShareComplete(f : String->Void);
-	@CPP public static function setOnShareFail(f : String->Void);
+	@CPP public static function setOnShareComplete(f : String->Void){}
+	@CPP public static function setOnShareFail(f : String->Void){}
 
 }

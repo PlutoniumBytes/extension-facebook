@@ -9,6 +9,13 @@ import haxe.io.BytesOutput;
  */
 class RestClient
 {
+
+    // dummy function to fix non openfl build
+    public static function deleteAsync(url:String, onData:String->Void = null, parameters:Map < String, String > = null, onError:String->Void = null):Void
+    {
+
+    }
+
     public static function postAsync(url:String, onData:String->Void = null, parameters:Map < String, String > = null, onError:String->Void = null):Void
     {
         var r = RestClient.buildHttpRequest(
