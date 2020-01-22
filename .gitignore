@@ -6,3 +6,4 @@ dependencies/android/facebook-sdk/.project
 project/obj
 ndll/iPhone/*.hash
 *.zip
+dev-extension-facebook.iml
