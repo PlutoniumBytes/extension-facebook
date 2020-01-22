@@ -9,8 +9,6 @@ import extension.facebook.ios.FacebookCFFI;
 #end
 
 import extension.util.task.*;
-import flash.Lib;
-import flash.net.URLRequest;
 import haxe.Json;
 #if (cpp || neko)
 import sys.net.Host;
@@ -31,7 +29,7 @@ abstract PermissionsType(Int) {
 
 class Facebook extends TaskExecutor {
 
-	static var initted = false;
+	public static var initted = false;
 	public var accessToken : String;
 
 	private var initCallback:Bool->Void;
