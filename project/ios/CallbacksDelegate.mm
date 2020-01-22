@@ -6,6 +6,7 @@
 #import <FBSDKCoreKit/FBSDKApplicationDelegate.h>
 #import <UIKit/UIKit.h>
 
+/*
 @implementation NMEAppDelegate (CallbacksDelegate)
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
@@ -17,7 +18,7 @@
 }
 
 @end
-
+*/
 @implementation CallbacksDelegate
 
 // App Invite dialog callbacks:
